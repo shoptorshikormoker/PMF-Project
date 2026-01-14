@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1190.0" stylesheets="@../../../style/app.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seu.pfmfx.controller.BudgetController">
+
+    <children>
+
+        <Label layoutX="30.0" layoutY="20.0" styleClass="page-title" text="Budget Management" />
+
+        <VBox layoutX="30.0" layoutY="80.0" prefWidth="1130.0" spacing="15.0" styleClass="card">
+
+            <Label styleClass="section-title" text="Set Category Budget" />
+
+            <HBox spacing="15.0">
+
+                <ComboBox fx:id="cbCategory" prefWidth="250.0" promptText="Category" />
+
+                <TextField fx:id="txtBudgetAmount" prefWidth="250.0" promptText="Budget Amount" />
+
+                <DatePicker fx:id="dpMonth" prefWidth="250.0" />
+
+            </HBox>
+
+            <Button fx:id="btnSaveBudget" prefHeight="30.0" prefWidth="180.0" styleClass="primary-btn" text="Save Budget" />
+
+        </VBox>
+
+        <VBox layoutX="30.0" layoutY="261.0" prefHeight="624.0" prefWidth="1130.0" styleClass="card">
+
+            <Label styleClass="section-title" text="Category Budgets" />
+
+            <TableView fx:id="budgetTable" prefHeight="567.0" prefWidth="1090.0">
+
+                <columns>
+                    <TableColumn fx:id="colCategory" prefWidth="300.0" text="Category" />
+                    <TableColumn fx:id="colBudgetAmount" prefWidth="250.0" text="Budget Amount" />
+                    <TableColumn fx:id="colSpentAmount" prefWidth="250.0" text="Spent" />
+                    <TableColumn fx:id="colRemainingAmount" prefWidth="290.0" text="Remaining" />
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </children>
+</AnchorPane>

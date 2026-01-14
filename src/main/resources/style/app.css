@@ -1,0 +1,57 @@
+.page-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c2c2c;
+}
+
+.primary-btn {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+     -fx-padding: 0 0 0 10;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-padding: 10 10 10 20;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.nav-btn.active {
+    -fx-background-color: #5D5FEF;
+    -fx-text-fill: white;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #E6E9FF;
+}
+
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5D5FEF;
+}
+
+.text-field,
+.combo-box,
+.date-picker,
+.text-area {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #d0d0d0;
+}
+
+.table-view {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}

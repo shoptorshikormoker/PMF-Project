@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1190.0" stylesheets="@../../../style/app.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seu.pfmfx.controller.ExpenseController">
+
+    <children>
+
+        <Label layoutX="30.0" layoutY="20.0" styleClass="page-title" text="Expense Management" />
+
+        <VBox layoutX="30.0" layoutY="80.0" prefWidth="1130.0" spacing="15.0" styleClass="card">
+
+            <Label styleClass="section-title" text="Add New Expense" />
+
+            <HBox spacing="15.0">
+
+                <TextField fx:id="txtAmount" prefWidth="200.0" promptText="Amount" />
+
+                <ComboBox fx:id="cbCategory" prefWidth="200.0" promptText="Category" />
+
+                <DatePicker fx:id="dpDate" prefWidth="200.0" />
+
+            </HBox>
+
+            <TextArea fx:id="txtDescription" prefRowCount="2" promptText="Description" />
+
+            <Button fx:id="btnAddExpense" prefHeight="30.0" prefWidth="150.0" styleClass="primary-btn" text="Add Expense" />
+
+        </VBox>
+
+        <VBox layoutX="30.0" layoutY="321.0" prefHeight="564.0" prefWidth="1130.0" spacing="10.0" styleClass="card">
+
+            <Label styleClass="section-title" text="Expense List" />
+
+            <TableView fx:id="expenseTable" prefHeight="499.0" prefWidth="1090.0">
+
+                <columns>
+                    <TableColumn fx:id="colDate" prefWidth="200.0" text="Date" />
+                    <TableColumn fx:id="colCategory" prefWidth="250.0" text="Category" />
+                    <TableColumn fx:id="colAmount" prefWidth="200.0" text="Amount" />
+                    <TableColumn fx:id="colDescription" prefWidth="350.0" text="Description" />
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
