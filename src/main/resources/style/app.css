@@ -9,7 +9,20 @@
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-     -fx-padding: 0 0 0 10;
+}
+
+.danger-btn {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.reset-btn {
+    -fx-background-color: #ffde00;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
 }
 
 .nav-btn {

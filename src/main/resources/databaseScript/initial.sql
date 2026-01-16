@@ -7,7 +7,10 @@ CREATE TABLE users (
 CREATE TABLE category (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    type varchar(50) NOT NULL
+    type varchar(50) NOT NULL,
+    user_id INT NOT NULL,
+
+    CONSTRAINT fk_category_user  FOREIGN KEY (user_id) REFERENCES users(id)
 );
 CREATE TABLE income (
     id INT AUTO_INCREMENT PRIMARY KEY,

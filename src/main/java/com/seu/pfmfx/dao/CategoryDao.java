@@ -12,4 +12,10 @@ public interface CategoryDao {
     List<Category> findAll();
 
     List<Category> findByType(CategoryType type);
+	
+	List<Category> findByNameAndType(String name, String type);
+	
+	void update(Category category);
+	
+	void deleteById(int id);
 }

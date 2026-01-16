@@ -7,13 +7,15 @@ public class Category {
     private int id;
     private String name;
     private CategoryType type;
+	private int userId;
 
     public Category() {}
 
-    public Category(int id, String name, CategoryType type) {
+    public Category(int id, String name, CategoryType type, int userId) {
         this.id = id;
         this.name = name;
         this.type = type;
+		this.userId = userId;
     }
 
     public int getId() {
@@ -39,4 +41,12 @@ public class Category {
     public void setType(CategoryType type) {
         this.type = type;
     }
+	
+	public int getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 }
