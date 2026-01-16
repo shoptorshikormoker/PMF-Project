@@ -31,7 +31,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                return map(rs);
+                return mapToUser(rs);
             }
         } catch (SQLException e) {
             throw new RuntimeException("Failed to find user by email", e);
@@ -48,7 +48,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                return map(rs);
+                return mapToUser(rs);
             }
         } catch (SQLException e) {
             throw new RuntimeException("Failed to find user by id", e);
@@ -56,12 +56,12 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         return null;
     }
 
-    private User map(ResultSet rs) throws SQLException {
-        User u = new User();
-        u.setId(rs.getInt("id"));
-        u.setName(rs.getString("name"));
-        u.setEmail(rs.getString("email"));
-        u.setPassword(rs.getString("password"));
-        return u;
+    private User mapToUser(ResultSet rs) throws SQLException {
+        User user = new User();
+        user.setId(rs.getInt("id"));
+        user.setName(rs.getString("name"));
+        user.setEmail(rs.getString("email"));
+        user.setPassword(rs.getString("password"));
+        return user;
     }
 }

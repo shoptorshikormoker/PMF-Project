@@ -48,7 +48,7 @@ public class LoginController {
 		}
 		
 		if (!user.getPassword().equals(password)) {
-			AlertUtil.showError("Invalid email or password");
+			AlertUtil.showError("Invalid password");
 			return;
 		}
 		
