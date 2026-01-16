@@ -34,13 +34,13 @@
 
             <TextArea fx:id="txtDescription" prefRowCount="2" promptText="Description" />
 
-            <Button fx:id="btnAddIncome" prefHeight="30.0" prefWidth="150.0" styleClass="primary-btn" text="Add Income" />
+            <Button fx:id="btnAddIncome" onAction="#btnAddIncome" prefHeight="30.0" prefWidth="150.0" styleClass="primary-btn" text="Add Income" />
 
         </VBox>
 
         <VBox layoutX="30.0" layoutY="321.0" prefHeight="564.0" prefWidth="1130.0" styleClass="card">
 
-            <Label styleClass="section-title" text="Income List" />
+            <Label fx:id="incomeList" styleClass="section-title" text="Income List" />
 
             <TableView fx:id="incomeTable" prefHeight="499.0" prefWidth="1090.0">
 
