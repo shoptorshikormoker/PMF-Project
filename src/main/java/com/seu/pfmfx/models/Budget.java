@@ -4,15 +4,17 @@ import java.time.YearMonth;
 
 public class Budget {
 
-    private int id;        // PK
-    private int userId;          // FK → User
+    private int id;
+	private int categoryId;
+    private int userId;
     private double amount;
-    private YearMonth month;     // e.g. 2026-01
+    private YearMonth month;     // 2026-01
 
     public Budget() {}
 
-    public Budget(int budgetId, int userId, double amount, YearMonth month) {
+    public Budget(int budgetId, int categoryId, int userId, double amount, YearMonth month) {
         this.id = budgetId;
+		this.categoryId = categoryId;
         this.userId = userId;
         this.amount = amount;
         this.month = month;
@@ -25,8 +27,16 @@ public class Budget {
     public void setId(int id) {
         this.id = id;
     }
-
-    public int getUserId() {
+	
+	public int getCategoryId() {
+		return categoryId;
+	}
+	
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+	
+	public int getUserId() {
         return userId;
     }
 
