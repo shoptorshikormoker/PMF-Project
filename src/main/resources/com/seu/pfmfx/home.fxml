@@ -35,6 +35,11 @@
                   <Font size="16.0" />
                </font>
             </Button>
+            <Button fx:id="navcatBtn" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCategoryOnAction" style="-fx-padding: 10 10 10 20;" styleClass="nav-btn" text="Category">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
          </children>
       </VBox>
       <VBox layoutX="15.0" layoutY="837.0" prefHeight="45.0" prefWidth="209.0" style="-fx-background-color: F1F5FB;">
