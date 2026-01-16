@@ -53,7 +53,7 @@ public class HomeController implements Initializable {
 
     @FXML
     void btnCategoryOnAction(ActionEvent event) {
-        setNavActiveClass(navcatBTN);
+        setNavActiveClass(navcatBtn);
         loadView("category.fxml");
 
     }
