@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
     @FXML
-    private Button navDashboardBtn, navIncomeBtn, navExpenseBtn, navBudgetBtn, navTrxBtn;
+    private Button navDashboardBtn, navIncomeBtn, navExpenseBtn, navBudgetBtn, navTrxBtn,navcatBtn;
     @FXML
     private AnchorPane contentPane;
 
@@ -49,6 +49,13 @@ public class HomeController implements Initializable {
     void btnTransactionOnAction(ActionEvent event) {
         setNavActiveClass(navTrxBtn);
         loadView("transaction.fxml");
+    }
+
+    @FXML
+    void btnCategoryOnAction(ActionEvent event) {
+        setNavActiveClass(navcatBTN);
+        loadView("category.fxml");
+
     }
     private void setNavActiveClass(Button activeBtn) {
         navDashboardBtn.getStyleClass().remove("active");
