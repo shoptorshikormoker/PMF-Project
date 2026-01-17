@@ -57,9 +57,8 @@ public class RegisterController {
 		User user = new User();
 		user.setName(fullName);
 		user.setEmail(email);
-		user.setPassword(password); // hash later
-		
-		// Save user
+		user.setPassword(password);
+
 		try {
 			userDao.save(user);
 		} catch (Exception e) {
