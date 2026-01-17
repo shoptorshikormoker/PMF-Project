@@ -24,17 +24,23 @@
 
             <HBox spacing="15.0">
 
-                <TextField fx:id="txtAmount" prefWidth="200.0" promptText="Amount" />
+                <TextField fx:id="amountField" prefWidth="200.0" promptText="Amount" />
 
-                <ComboBox fx:id="cbCategory" prefWidth="200.0" promptText="Category" />
+                <ComboBox fx:id="categoryComboBox" prefWidth="200.0" promptText="Category" />
 
-                <DatePicker fx:id="dpDate" prefWidth="200.0" />
+                <DatePicker fx:id="datePicker" prefWidth="200.0" />
 
             </HBox>
 
-            <TextArea fx:id="txtDescription" prefRowCount="2" promptText="Description" />
-
-            <Button fx:id="btnAddExpense" prefHeight="30.0" prefWidth="150.0" styleClass="primary-btn" text="Add Expense" />
+            <TextArea fx:id="descriptionField" prefRowCount="2" promptText="Description" />
+         <HBox prefHeight="0.0" prefWidth="1090.0" spacing="15.0">
+            <children>
+      
+                  <Button fx:id="btnAddOrUpdate" prefHeight="30.0" prefWidth="150.0" styleClass="primary-btn" text="Add Expense" />
+               <Button fx:id="btnDelete" prefHeight="30.0" prefWidth="74.0" styleClass="danger-btn" text="Delete" />
+               <Button fx:id="btnReset" prefHeight="30.0" prefWidth="58.0" styleClass="reset-btn" text="Reset" />
+            </children>
+         </HBox>
 
         </VBox>
 

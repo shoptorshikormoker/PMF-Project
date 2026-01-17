@@ -6,11 +6,13 @@ import com.seu.pfmfx.models.Category;
 import java.util.List;
 
 public interface CategoryDao {
-
+	
     void save(Category category);
-
+	
+	Category findById(int id);
+	
     List<Category> findAll();
-
+	
     List<Category> findByType(CategoryType type);
 	
 	List<Category> findByNameAndType(String name, String type);
