@@ -6,7 +6,6 @@ import com.seu.pfmfx.enumaration.CategoryType;
 import com.seu.pfmfx.models.Category;
 import com.seu.pfmfx.session.AppSession;
 import com.seu.pfmfx.util.AlertUtil;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -189,7 +188,7 @@ public class CategoryController {
 	
 	private void loadCategories() {
 		categoryList.clear();
-		categoryList.addAll(categoryDao.findAll());
+		categoryList.addAll(categoryDao.findAllByUserId(AppSession.getCurrentUserId()));
 	}
 	
 	private void clearForm() {

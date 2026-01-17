@@ -154,7 +154,7 @@ public class IncomeController {
         if (!validateForm()) return;
 
         Income income = new Income();
-        income.setUserId(AppSession.getCurrentUser().getId());
+        income.setUserId(AppSession.getCurrentUserId());
         income.setCategoryId(categoryComboBox.getValue().getId());
         income.setAmount(Double.parseDouble(amountField.getText()));
         income.setDate(datePicker.getValue());
@@ -246,7 +246,7 @@ public class IncomeController {
     private void loadIncome() {
         incomeList.clear();
         incomeList.addAll(
-                incomeDao.findByUserId(AppSession.getCurrentUser().getId())
+                incomeDao.findByUserId(AppSession.getCurrentUserId())
         );
     }
 

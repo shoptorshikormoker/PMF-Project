@@ -9,4 +9,6 @@ public interface BudgetDao {
     void save(Budget budget);
 
     Budget findByUserAndMonth(int userId, YearMonth month);
+	
+	double getTotalBudgetByUser(int userId);
 }

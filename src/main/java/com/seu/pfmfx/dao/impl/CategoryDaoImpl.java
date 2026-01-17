@@ -44,6 +44,24 @@ public class CategoryDaoImpl extends BaseDao implements CategoryDao {
 	}
 	
 	@Override
+	public List<Category> findAllByUserId(int userId) {
+		List<Category> list = new ArrayList<>();
+		String sql = "SELECT * FROM category where user_id = ?";
+		
+		try (PreparedStatement ps = getConnection().prepareStatement(sql)){
+		     ps.setInt(1, userId);
+		     ResultSet rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				list.add(mapToCategory(rs));
+			}
+		} catch (SQLException e) {
+			throw new RuntimeException("Failed to load categories", e);
+		}
+		return list;
+	}
+	
+	@Override
     public List<Category> findAll() {
         List<Category> list = new ArrayList<>();
         String sql = "SELECT * FROM category";

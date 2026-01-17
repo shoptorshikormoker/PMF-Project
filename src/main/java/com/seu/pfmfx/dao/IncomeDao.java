@@ -12,4 +12,6 @@ public interface IncomeDao {
 	void deleteById(int id);
 	
 	List<Income> findByUserId(int userId);
+	
+	double getTotalIncomeByUser(int userId);
 }

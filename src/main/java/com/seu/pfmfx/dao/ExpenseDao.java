@@ -13,4 +13,6 @@ public interface ExpenseDao {
 	void deleteById(int id);
 	
 	List<Expense> findByUser(int userId);
+	
+	double getTotalExpenseByUser(int userId);
 }

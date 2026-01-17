@@ -10,7 +10,7 @@
 
     <children>
 
-        <Pane maxWidth="1190.0" prefHeight="510.0" prefWidth="1190.0" style="-fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298;" styleClass="active">
+        <Pane maxWidth="1190.0" prefHeight="510.0" prefWidth="1190.0"  styleClass="active">
          <children>
             <Pane layoutX="30.0" layoutY="80.0" prefHeight="111.0" prefWidth="1132.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 15;">
                <children>
@@ -37,7 +37,7 @@
                                  <Font size="16.0" />
                               </font>
                            </Label>
-                           <Label fx:id="lblTotalIncome1" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
+                           <Label fx:id="lblTotalExpense" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
                               <font>
                                  <Font size="14.0" />
                               </font>
@@ -51,7 +51,7 @@
                                  <Font size="16.0" />
                               </font>
                            </Label>
-                           <Label fx:id="lblTotalIncome11" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
+                           <Label fx:id="lblTotalBudget" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
                               <font>
                                  <Font size="14.0" />
                               </font>
@@ -65,7 +65,7 @@
                                  <Font size="16.0" />
                               </font>
                            </Label>
-                           <Label fx:id="lblTotalIncome111" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
+                           <Label fx:id="lblBalance" layoutX="14.0" layoutY="40.0" styleClass="card-value" text="৳ 0.00">
                               <font>
                                  <Font size="14.0" />
                               </font>

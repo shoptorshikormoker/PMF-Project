@@ -11,6 +11,7 @@ public interface CategoryDao {
 	
 	Category findById(int id);
 	
+    List<Category> findAllByUserId(int userId);
     List<Category> findAll();
 	
     List<Category> findByType(CategoryType type);

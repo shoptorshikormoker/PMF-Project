@@ -155,7 +155,7 @@ public class ExpenseController {
 		if (!validateForm()) return;
 		
 		Expense expense = new Expense();
-		expense.setUserId(AppSession.getCurrentUser().getId());
+		expense.setUserId(AppSession.getCurrentUserId());
 		expense.setCategoryId(categoryComboBox.getValue().getId());
 		expense.setAmount(Double.parseDouble(amountField.getText()));
 		expense.setDate(datePicker.getValue());
@@ -250,7 +250,7 @@ public class ExpenseController {
 	private void loadExpenses() {
 		expenseList.clear();
 		expenseList.addAll(
-				expenseDao.findByUser(AppSession.getCurrentUser().getId())
+				expenseDao.findByUser(AppSession.getCurrentUserId())
 		);
 	}
 	

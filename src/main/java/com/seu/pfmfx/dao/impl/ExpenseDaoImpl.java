@@ -94,4 +94,24 @@ public class ExpenseDaoImpl extends BaseDao implements ExpenseDao {
 		
 		return list;
 	}
+	
+	@Override
+	public double getTotalExpenseByUser(int userId) {
+		String sql = "SELECT COALESCE(SUM(amount), 0) FROM expense WHERE user_id = ?";
+		
+		try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
+			
+			ps.setInt(1, userId);
+			ResultSet rs = ps.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getDouble(1);
+			}
+			
+		} catch (SQLException e) {
+			throw new RuntimeException("Failed to calculate total expense", e);
+		}
+		
+		return 0.0;
+	}
 }

@@ -95,4 +95,24 @@ public class IncomeDaoImpl extends BaseDao implements IncomeDao {
 		
 		return list;
 	}
+	
+	@Override
+	public double getTotalIncomeByUser(int userId) {
+		String sql = "SELECT COALESCE(SUM(amount), 0) FROM income WHERE user_id = ?";
+		
+		try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
+			
+			ps.setInt(1, userId);
+			ResultSet rs = ps.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getDouble(1);
+			}
+			
+		} catch (SQLException e) {
+			throw new RuntimeException("Failed to calculate total income", e);
+		}
+		
+		return 0.0;
+	}
 }
